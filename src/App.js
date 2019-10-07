@@ -19,12 +19,12 @@ class App extends React.Component {
   }
 
   handleOption1Selected() {
-    console.log('Left click');
+    console.log('Left click. Move to ' + this.state.currentStep.option1.nextStepId);
     this.moveToNextStep(this.state.currentStep.option1.nextStepId);
   }
 
   handleOption2Selected() {
-    console.log('Right click');
+    console.log('Right click. Move to ' + this.state.currentStep.option2.nextStepId);
     this.moveToNextStep(this.state.currentStep.option2.nextStepId);
   }
 

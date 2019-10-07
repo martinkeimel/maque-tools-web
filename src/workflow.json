@@ -31,11 +31,11 @@
             "option2": {
                 "title": "Escuhcar musica",
                 "imageUrl": "img/musica.png",
-                "nextStepId": "JugarMusica"
+                "nextStepId": "Cancion"
             }
         },
         {
-            "id": "JugarMusica",
+            "id": "Cancion",
             "title": "Que cancion queres escuchar?",
             "option1": {
                 "title": "Lulu",

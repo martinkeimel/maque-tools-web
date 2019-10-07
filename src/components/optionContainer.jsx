@@ -28,6 +28,14 @@ export class OptionContainer extends React.Component {
         });
     }
 
+    handleRightClick(e) {
+        e.preventDefault();
+        this.setState({
+            leftOptionSelected: false,
+            rightOptionSelected: true
+        });
+    }
+    
     componentDidUpdate(prevProps, prevState) {
         if (!prevState.leftOptionSelected && this.state.leftOptionSelected) {
             this.timer = setTimeout(() => { 
@@ -49,15 +57,6 @@ export class OptionContainer extends React.Component {
             leftOptionSelected: false,
             rightOptionSelected: false
           });
-    }
-
-    handleRightClick(e) {
-        e.preventDefault();
-        this.setState({
-            leftOptionSelected: false,
-            rightOptionSelected: true
-        });
-
     }
 
     render() {
