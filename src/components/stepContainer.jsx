@@ -6,10 +6,10 @@ import VideoContainer from './videoContainer';
 export class StepContainer extends React.Component {
   render() {
 
-    if (this.props.currentStep.videoUrl){
+    if (this.props.currentStep.youtubeVideoId){
       return (
         <VideoContainer 
-        videoUrl={this.props.currentStep.videoUrl}
+          youtubeVideoId={this.props.currentStep.youtubeVideoId}
         />)
     }
 

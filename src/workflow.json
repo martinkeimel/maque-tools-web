@@ -18,7 +18,7 @@
         },
         {
             "id": "Dormir",
-            "videoUrl": "sarasa"
+            "youtubeVideoId": "15xSaEQpQCk"
         },
         {
             "id": "JugarMusica",
@@ -34,6 +34,7 @@
                 "nextStepId": "Cancion"
             }
         },
+        
         {
             "id": "Cancion",
             "title": "Que cancion queres escuchar?",
@@ -50,11 +51,11 @@
         },
         {
             "id": "Lulu",
-            "videoUrl": "https://www.youtube.com/watch?v=53ePiCirfvk"
+            "youtubeVideoId": "53ePiCirfvk"
         },
         {
             "id": "Serpiente",
-            "videoUrl": "https://www.youtube.com/watch?v=q8dilxHvbiM"
+            "youtubeVideoId": "q8dilxHvbiM"
         }
     ]
 }
