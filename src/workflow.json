@@ -1,0 +1,60 @@
+{
+    "title": "Hola Manu!",
+    "initialStepId": "DormirDivertirte",
+    "steps": [
+        {
+            "id": "DormirDivertirte",
+            "title": "Que queres hacer? Dormir o divertirte?",
+            "option1": {
+                "title": "Dormir",
+                "imageUrl": "http://www.arasaac.org/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzNjkucG5n",
+                "nextStepId": "Dormir"
+            },
+            "option2": {
+                "title": "Divertirte",
+                "imageUrl": "http://www.arasaac.org/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzg5OTIucG5n",
+                "nextStepId": "JugarMusica"
+            }
+        },
+        {
+            "id": "Dormir",
+            "videoUrl": "sarasa"
+        },
+        {
+            "id": "JugarMusica",
+            "title": "Que queres hacer? Jugar o escuchar musica?",
+            "option1": {
+                "title": "Jugar",
+                "imageUrl": "img/jugar.png",
+                "nextStepId": ""
+            },
+            "option2": {
+                "title": "Escuhcar musica",
+                "imageUrl": "img/musica.png",
+                "nextStepId": "JugarMusica"
+            }
+        },
+        {
+            "id": "JugarMusica",
+            "title": "Que cancion queres escuchar?",
+            "option1": {
+                "title": "Lulu",
+                "imageUrl": "img/lulu.png",
+                "nextStepId": "Lulu"
+            },
+            "option2": {
+                "title": "Serpiente",
+                "imageUrl": "img/serpiente.png",
+                "nextStepId": "Serpiente"
+            }
+        },
+        {
+            "id": "Lulu",
+            "videoUrl": "https://www.youtube.com/watch?v=53ePiCirfvk"
+        },
+        {
+            "id": "Serpiente",
+            "videoUrl": "https://www.youtube.com/watch?v=q8dilxHvbiM"
+        }
+    ]
+}

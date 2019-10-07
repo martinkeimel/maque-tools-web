@@ -1,23 +1,56 @@
 import React from 'react';
-import OptionContainer from './components/optionContainer';
+import StepContainer from './components/stepContainer';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Workflow from './workflow.json';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Hola Manu.
-        </p>
-        <OptionContainer 
-          option1Image="https://www.elreinoinfantil.com/content/bucket/1/251h195.png" 
-          option1Link="https://www.youtube.com/watch?v=53ePiCirfvk"
-          option2Image="https://www.elreinoinfantil.com/content/bucket/4/254h195.png"
-          option2Link="https://www.youtube.com/watch?v=q8dilxHvbiM" />
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props, context) {
+    super(props, context);
+    this.state = {
+      currentStep: Workflow.steps.find((element) => {
+        return element.id === Workflow.initialStepId;
+      })
+    };
+
+    this.handleOption1Selected = this.handleOption1Selected.bind(this);
+    this.handleOption2Selected = this.handleOption2Selected.bind(this);
+    this.moveToNextStep = this.moveToNextStep.bind(this);
+  }
+
+  handleOption1Selected() {
+    console.log('Left click');
+    this.moveToNextStep(this.state.currentStep.option1.nextStepId);
+  }
+
+  handleOption2Selected() {
+    console.log('Right click');
+    this.moveToNextStep(this.state.currentStep.option2.nextStepId);
+  }
+
+  moveToNextStep(nextStepId) {
+    this.setState({
+      currentStep: Workflow.steps.find((element) => {
+        return element.id === nextStepId;
+      })
+    });
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <p>
+            {Workflow.title}
+          </p>
+          <StepContainer 
+            currentStep={this.state.currentStep} 
+            onOption1Selected={this.handleOption1Selected} 
+            onOption2Selected={this.handleOption2Selected} />
+        </header>
+      </div>
+    );
+  }
 }
 
 export default App;
